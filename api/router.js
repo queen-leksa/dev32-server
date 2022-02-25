@@ -1,3 +1,30 @@
+/**
+* @swagger
+* /users/add:
+*   post:
+*     produces:
+*       - application/json
+*     parameters:
+*       - name: login
+*         in: formData
+*         required: true
+*         type: string
+* */
+
+/**
+* @swagger
+* /users/show:
+*   get:
+*     produces:
+*       - application/json
+*     tags:
+*       - users
+*     responses:
+*        200:
+*          description: hello world
+* */
+
+
 const router = require("express").Router();
 const {
     getAllUsers,
