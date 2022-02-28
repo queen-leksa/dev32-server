@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dev Server</title>
+    <link rel="stylesheet" href="/fonts/fonts.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/img/logo.svg">
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <header>
+            <a href="/"><img src="/img/logo-light.svg" alt="IThub"></a>
+        </header>
+        <nav>
+            <ul class="menu">
+                <li><a href="">Создать таблицу</a></li>
+                <li>Все таблицы
+                    <ul class="submenu">
+                        <li><a href="/pages/page.html">users</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <footer>©2022 3Р2.19</footer>
+    </div>
+    <main>
+        <h1>Users</h1>
+        <section>
+            <h3>Добавить запись</h3>
+            <form id="addRecord">
+                <div class="column">
+                    <div class="form-row">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div class="form-row">
+                        <label for="age">Возраст</label>
+                        <input type="number" id="age" name="age" min="0">
+                    </div>
+                    <div class="form-row">
+                        <label for="login">Логин</label>
+                        <input type="text" id="login" name="login">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="form-row">
+                        <label for="password">Пароль</label>
+                        <input type="password" id="password" name="password">
+                    </div>
+                    <div class="form-row">
+                        <label for="email">email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-row">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <button class="btn" type="submit">Добавить</button>
+                </div>
+            </form>
+        </section>
+        <section>
+            <h3>Результат</h3>
+        </section>
+    </main>
+</div>
+</body>
+</html>

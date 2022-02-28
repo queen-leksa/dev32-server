@@ -1,0 +1,112 @@
+:root {
+    --f-mono: "Anonymous Pro";
+    --f-normal: "Roboto Condensed";
+    --f-decor: "Caveat";
+    --purple: #ab00ea;
+    --purple-dark: #57206b;
+    --purple-light: #c247ee;
+    --aqua: #0cceeb;
+    --lime: #a9eb17;
+    --orange: #eb7517;
+    --green: #17eb90;
+    --grey: #75687a;
+    --grey-light: #dcd9de;
+    --grey-dark: #2c272e;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    font-family: var(--f-normal);
+    padding: 50px;
+    background-color: var(--purple-dark);
+}
+h1 {
+    margin: 0;
+}
+.container {
+    background-color: var(--grey-light);
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 0 #0004, 0 0 15px 0 #0006;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+}
+.sidebar {
+    background-color: var(--purple-light);
+    padding: 24px;
+    box-shadow: 0 0 5px 0 #0004, 0 0 15px 0 #0006;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header img {
+    height: 36px;
+}
+footer {
+    font-size: .8rem;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.menu {
+    font-size: .8rem;
+}
+.menu li {
+    line-height: 24px;
+}
+.submenu li {
+    border-left: 1px solid;
+    padding-left: 12px;
+}
+.menu a:hover {
+    color: var(--grey-light);
+}
+main {
+    padding: 24px;
+}
+form {
+    display: flex;
+    gap: 24px;
+}
+.column {
+    flex: 50%;
+}
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+.form-row>:first-child {
+    margin-bottom: 6px;
+    line-height: 1;
+}
+.form-row>:last-child {
+    padding: 6px 12px;
+    font: 20px var(--f-mono);
+    border-radius: 6px;
+    border: 1px solid var(--grey-dark);
+}
+.btn {
+    font: 20px var(--f-mono);
+    padding: 6px 12px;
+    color: var(--grey-light);
+    background-color: var(--purple);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: var(--grey-dark);
+}

@@ -1,0 +1,88 @@
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("Roboto-Condensed/RobotoCondensed-Light.ttf") format("TrueType");
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("Roboto-Condensed/RobotoCondensed-LightItalic.ttf") format("TrueType");
+    font-style: italic;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("Roboto-Condensed/RobotoCondensed-Regular.ttf") format("TrueType");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("Roboto-Condensed/RobotoCondensed-Italic.ttf") format("TrueType");
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("Roboto-Condensed/RobotoCondensed-Bold.ttf") format("TrueType");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("Roboto-Condensed/RobotoCondensed-BoldItalic.ttf") format("TrueType");
+    font-style: italic;
+    font-weight: 700;
+}
+
+
+@font-face {
+    font-family: "Anonymous Pro";
+    src: url("Anonymous-Pro/AnonymousPro-Regular.ttf") format("TrueType");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Anonymous Pro";
+    src: url("Anonymous-Pro/AnonymousPro-Italic.ttf") format("TrueType");
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Anonymous Pro";
+    src: url("Anonymous-Pro/AnonymousPro-Bold.ttf") format("TrueType");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Anonymous Pro";
+    src: url("Anonymous-Pro/AnonymousPro-BoldItalic.ttf") format("TrueType");
+    font-style: italic;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Caveat";
+    src: url("Caveat/Caveat-Regular.ttf") format("TrueType");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Caveat";
+    src: url("Caveat/Caveat-Medium.ttf") format("TrueType");
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Caveat";
+    src: url("Caveat/Caveat-SemiBold.ttf") format("TrueType");
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Caveat";
+    src: url("Caveat/Caveat-Bold.ttf") format("TrueType");
+    font-style: normal;
+    font-weight: 700;
+}
+
