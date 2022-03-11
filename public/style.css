@@ -133,3 +133,20 @@ form {
 .card img {
     width: 80px;
 }
+
+.form-line {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 36px;
+    gap: 24px;
+}
+.form-add {
+    margin-bottom: 12px;
+    text-align: right;
+}
+.btn-del {
+    height: 36px;
+    font-size: 12px;
+    padding: 0;
+    align-self: end;
+    margin-bottom: 12px;
+}
