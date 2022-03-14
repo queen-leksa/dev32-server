@@ -34,11 +34,15 @@ const {
     delUser
 } = require("./controllers.js");
 
+const { getAllTables, addTable } = require("./tableCtl.js");
 
 router.get("/users/show", getAllUsers);
 router.get("/users/alone/:login", getUser);
 router.post("/users/add", addUser);
 router.put("/users/upd/:login", updUser);
 router.delete("/users/del/:login", delUser);
+
+router.get("/tables/show", getAllTables);
+router.post("/tables/add", addTable);
 
 module.exports = router;
