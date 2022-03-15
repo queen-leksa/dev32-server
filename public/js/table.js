@@ -43,7 +43,7 @@ addForm.addEventListener("submit", function(e) {
         }
     }
     console.log(body);
-    fetch("http://localhost:3002/api/tables/add", {
+    fetch("http://localhost:3002/api/tables/add/test", {
         method: "post",
         headers: {
             "Accept": "application/json",
@@ -54,5 +54,13 @@ addForm.addEventListener("submit", function(e) {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-        })
+            if (data.msg === "ok") {
+                addForm.reset();
+                let lines = document.getElementsByClassName("form-line");
+                for (let i = 1; i < lines.length; i++) {
+                    console.log(lines[i]);
+                    lines[i].remove();
+                }
+            }
+        });
 });

@@ -32,9 +32,9 @@ const {
     addUser,
     updUser,
     delUser
-} = require("./controllers.js");
+} = require("./ctl/userCtl.js");
 
-const { getAllTables, addTable } = require("./tableCtl.js");
+const { getAllTables, addTable } = require("./ctl/tableCtl.js");
 
 router.get("/users/show", getAllUsers);
 router.get("/users/alone/:login", getUser);
@@ -43,6 +43,6 @@ router.put("/users/upd/:login", updUser);
 router.delete("/users/del/:login", delUser);
 
 router.get("/tables/show", getAllTables);
-router.post("/tables/add", addTable);
+router.post("/tables/add/:db", addTable);
 
 module.exports = router;

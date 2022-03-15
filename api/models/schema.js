@@ -1,8 +1,8 @@
-module.exports = function (name, body, u, p, db = "shop") {
+module.exports = function (name, body, u, p, c, db = "shop") {
     return `
 const db = require("mongoose");
 
-const path = "mongodb+srv://${u}:${p}@dev-server.hqkgn.mongodb.net/${db}?retryWrites=true&w=majority";
+const path = "mongodb+srv://${u}:${p}@${c}/${db}?retryWrites=true&w=majority";
 
 db.connect(path, {
     useNewUrlParser: true,
