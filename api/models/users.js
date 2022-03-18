@@ -1,12 +1,14 @@
-const db = require("./db.js");
+const getUsers = function() {
+    const db = require("./db.js");
 
-const Users = db.Schema({
-    name: String,
-    age: Number,
-    login: String,
-    password: String,
-    email: String,
-    phone: String
-});
-
-module.exports = db.model("users", Users);
+    const Users = db.Schema({
+        name: String,
+        age: Number,
+        login: String,
+        password: String,
+        email: String,
+        phone: String
+    });
+    return db.model("users", Users);
+}
+module.exports = getUsers;

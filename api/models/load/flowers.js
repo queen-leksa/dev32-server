@@ -8,6 +8,6 @@ db.connect(path, {
     useUnifiedTopology: true
 });
 
-const Schema = db.Schema({"rgb":"string","hex":"string","name":"string"});
-module.exports = db.model("colors", Schema);
+const Schema = db.Schema({"name":"string","color":"string","count":"number"});
+module.exports = db.model("flowers", Schema);
     

@@ -1,6 +1,7 @@
-const Users = require("../models/users.js");
+const getUsers = require("../models/users.js");
 
 const getAllUsers = async (req, res) => {
+    const Users = getUsers();
     try {
         const result = await Users.find({});
         res.json({msg: "ok", data: result});
@@ -9,6 +10,7 @@ const getAllUsers = async (req, res) => {
     }
 };
 const getUser = async (req, res) => {
+    const Users = getUsers();
     try {
         const result = await Users.findOne({login: req.params.login});
         res.json({msg: "ok", data: result});
@@ -17,6 +19,7 @@ const getUser = async (req, res) => {
     }
 };
 const addUser = async (req, res) => {
+    const Users = getUsers();
     try {
         await new Users(req.body).save();
         res.json({msg: "ok"});
@@ -25,6 +28,7 @@ const addUser = async (req, res) => {
     }
 };
 const updUser = async (req, res) => {
+    const Users = getUsers();
     try {
         await Users.updateOne({login: req.params.login}, {$set: req.body});
         res.json({msg: "ok"});
@@ -33,6 +37,7 @@ const updUser = async (req, res) => {
     }
 };
 const delUser = async (req, res) => {
+    const Users = getUsers();
     try {
         await Users.deleteOne({login: req.params.login});
         res.json({msg: "ok"});

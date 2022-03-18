@@ -33,8 +33,38 @@ const addTable = async function(req, res) {
                  });
 }
 
-const getAllTables = function(req, res) {
-
+const getAllTables = async function(req, res) {
+    let tables;
+    if (req.params.db) {
+        tables = await Tables.find({db: req.params.db}).select("-_id -__v");
+    } else {
+        tables = await Tables.find({}).select("-_id -__v");
+    }
+    fs.readdir("./api/models/load", function(err, files) {
+        console.log(files);
+        files = files.map(function(f) {
+            let name = f.split(".");
+            name.pop();
+            return name.join(".");
+        });
+        console.log(files);
+        tables.forEach(function(t) {
+            if (!files.includes(t.name)) {
+                console.log(`no file ${t.name}`);
+                let body = {};
+                t.fields.forEach(function(el) {
+                    body[el.name] = el.type;
+                });
+                let text = NewSchema(t.name, JSON.stringify(body), dbUser, dbPwd, dbCluster, t.db);
+                fs.writeFile(`./api/models/load/${t.name}.js`, text, function(err) {
+                    if (!err) {
+                        console.log(`create file ${t.name}`);
+                    }
+                });
+            }
+        });
+    })
+    res.json({msg: "ok", data: tables});
 }
 
 module.exports = {addTable, getAllTables};
